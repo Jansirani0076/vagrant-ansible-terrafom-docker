@@ -1,6 +1,22 @@
 # =====================
 # Python
 # =====================
+# OS / editor junk
+*.swp
+*.swo
+*.bak
+*.tmp
+.viminfo
+.cache/
+.sudo_as_admin_successful
+
+# SSH and secrets
+.ssh/
+*.pem
+*.key
+.env
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -28,6 +44,9 @@ instance/
 *.tfstate.*
 .terraform/
 .terraform.lock.hcl
+*.egg-info/
+*.egg
+
 crash.log
 override.tf
 override.tf.json
@@ -55,4 +74,19 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+=======
+# Ansible (if you don’t want to push playbooks)
+ansible/
 
+# Local configs
+.vagrant/
+.vbox_version
+
+# Logs
+*.log
+ .bash_logout
+ .bashrc
+ .gitignore
+ .profile
+ .terraform.d/checkpoint_cache
+ .terraform.d/checkpoint_signature

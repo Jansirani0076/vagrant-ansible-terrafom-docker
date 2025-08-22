@@ -11,19 +11,13 @@ provider "docker" {
   host = "unix:///var/run/docker.sock"
 }
 
-# resource "docker_image" "quiz_app" {
-#   name = "quiz-app:${filesha256("${path.module}/../k8s-quiz/Dockerfile")}"
-#   build {
-#     context    = "/home/vagrant/terraform-docker/k8s-quiz"
-#     dockerfile = "Dockerfile"
-#   }
-# }
 
 
 resource "docker_image" "quiz_app" {
-  name = "quiz-app:${filesha256("${path.module}/../k8s-quiz/Dockerfile")}"
+  name = "quiz-app:latest"
+
   build {
-    context    = "${path.module}/../k8s-quiz"
+    context    = "${path.module}/k8s-quiz"
     dockerfile = "Dockerfile"
   }
 
@@ -32,6 +26,7 @@ resource "docker_image" "quiz_app" {
   }
   keep_locally = false
 }
+
 
 ## running docker
 resource "docker_container" "quiz_app" {
@@ -47,3 +42,17 @@ resource "docker_container" "quiz_app" {
     replace_triggered_by = [docker_image.quiz_app]
   }
 }
+
+
+variable "app_port" {
+  description = "Port to expose quiz app"
+  type        = number
+  default     = 5000
+}
+
+
+
+data "external" "host_ip" {
+  program = ["${path.module}/get_ip.sh"]
+}
+
