@@ -140,11 +140,11 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
     ```
    <img width="1273" height="280" alt="image" src="https://github.com/user-attachments/assets/c895a070-9d11-4634-bc83-8b8e112e93dc" />
 
-    
 
-4. **Push code changes**
+---
 
-   * Edit Flask app in `k8s-quiz/`.
+## 🔹 **Lets practice github Actions / CICD**
+
    * Commit & push:
 
      ```bash
