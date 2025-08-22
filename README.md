@@ -6,7 +6,7 @@ This project sets up a complete **DevOps lab environment** for students using **
 
 The goal is to give students a **hands-on CI/CD experience** where pushing code automatically deploys an application inside a provisioned VM.
 
-<img width="250" height="248" alt="image" src="https://github.com/user-attachments/assets/3baf3430-3c00-4d00-a66d-fe9c3c39b92c" /> <img width="250" height="173" alt="image" src="https://github.com/user-attachments/assets/020dfe67-b2c0-44e1-ba67-a9441a8c0a14" /> <img width="130" height="320" alt="image" src="https://github.com/user-attachments/assets/d978445f-3636-4a41-9db4-9429a8e01d79" /> <img width="140" height="166" alt="image" src="https://github.com/user-attachments/assets/da2269db-6b3c-415c-8eb2-17d3d6b257a6" /> <img width="310" height="226" alt="image" src="https://github.com/user-attachments/assets/b9a0605e-497f-4691-bed9-757fdc3dea50" />
+<img width="250" height="248" alt="image" src="https://github.com/user-attachments/assets/3baf3430-3c00-4d00-a66d-fe9c3c39b92c" /> <img width="250" height="173" alt="image" src="https://github.com/user-attachments/assets/020dfe67-b2c0-44e1-ba67-a9441a8c0a14" /> <img width="130" height="320" alt="image" src="https://github.com/user-attachments/assets/d978445f-3636-4a41-9db4-9429a8e01d79" /> <img width="140" height="166" alt="image" src="https://github.com/user-attachments/assets/da2269db-6b3c-415c-8eb2-17d3d6b257a6" /> <img width="200" height="226" alt="image" src="https://github.com/user-attachments/assets/b9a0605e-497f-4691-bed9-757fdc3dea50" />
 
 
 
