@@ -153,6 +153,7 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
 ## 🔹 **Lets practice github Actions / CICD**
 
 1. **Create token**
+   Click on the top right corner 
 
    <img width="1860" height="390" alt="image" src="https://github.com/user-attachments/assets/ebba8127-aba4-48eb-9c73-3f78c48ffc87" />
 
