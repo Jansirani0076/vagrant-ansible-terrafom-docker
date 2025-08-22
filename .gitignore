@@ -44,8 +44,12 @@ instance/
 *.tfstate.*
 .terraform/
 .terraform.lock.hcl
+.terraform.d
 *.egg-info/
 *.egg
+.bash_logout
+.bashrc
+.profile
 
 crash.log
 override.tf

@@ -40,6 +40,7 @@ resource "docker_container" "quiz_app" {
 
   lifecycle {
     replace_triggered_by = [docker_image.quiz_app]
+    create_before_destroy  = false   # destroy old before creating new
   }
 }
 
