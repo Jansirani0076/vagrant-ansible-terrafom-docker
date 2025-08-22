@@ -58,4 +58,3 @@ variable "app_port" {
 data "external" "host_ip" {
   program = ["${path.module}/get_ip.sh"]
 }
-
