@@ -33,10 +33,14 @@ interpreter_python = auto_silent
 
 [privilege_escalation]
 become = false
+
+[ssh_connection]
+ssh_args = -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+
 EOF
 
 # Task 1 - Install Apache
-cat <<EOF > /vagrant/ansible/install_apache.yml
+cat <<EOF > /home/vagrant/ansible/install_apache.yml
 ---
 - name: Install Apache on workers
   hosts: workers
@@ -57,7 +61,7 @@ cat <<EOF > /vagrant/ansible/install_apache.yml
 EOF
 
 # Task 2 - Create user
-cat <<EOF > /vagrant/ansible/user_add.yml
+cat <<EOF >  /home/vagrant/ansible/user_add.yml
 ---
 - name: Create DevOps user
   hosts: workers
@@ -72,7 +76,7 @@ cat <<EOF > /vagrant/ansible/user_add.yml
 EOF
 
 # Task 3 - Copy index.html
-cat <<EOF > /vagrant/ansible/copy_index.yml
+cat <<EOF >  /home/vagrant/ansible/copy_index.yml
 ---
 - name: Deploy custom index.html
   hosts: workers
@@ -87,7 +91,7 @@ cat <<EOF > /vagrant/ansible/copy_index.yml
 EOF
 
 # Task 4 - Stop Apache
-cat <<EOF > /vagrant/ansible/stop_apache.yml
+cat <<EOF >  /home/vagrant/ansible/stop_apache.yml
 ---
 - name: Stop Apache on workers
   hosts: workers
@@ -100,14 +104,14 @@ cat <<EOF > /vagrant/ansible/stop_apache.yml
 EOF
 
 # Task 5 - Install GitHub Runner
-cat <<EOF > /vagrant/ansible/install_github_runner.yml
+cat <<EOF >  /home/vagrant/ansible/install_github_runner.yml
 ---
 - name: Install GitHub Actions Runner
   hosts: all
   become: yes
 
   vars:
-    github_repo: "deenamanick/Value-Added-Course"
+    github_repo: "deenamanick/vagrant-ansible-terrafom-docker"
     runner_version: "2.328.0"
     runner_dir: "/opt/actions-runner"
     github_pat: "{{ lookup('env','GITHUB_PAT') }}"
