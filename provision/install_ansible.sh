@@ -15,6 +15,9 @@ sudo -u vagrant ssh-keygen -t rsa -b 2048 -N "" -f /home/vagrant/.ssh/id_rsa || 
 mkdir -p /home/vagrant/ansible
 
 cat <<EOF | sudo tee /home/vagrant/ansible/inventory.ini
+[runner]
+localhost ansible_connection=local
+
 [workers]
 worker1 ansible_host=172.20.0.11 ansible_user=root
 worker2 ansible_host=172.20.0.12 ansible_user=root
@@ -40,22 +43,22 @@ ssh_args = -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
 EOF
 
 # Task 1 - Install Apache
-cat <<EOF > /home/vagrant/ansible/install_apache.yml
+cat <<EOF > /home/vagrant/ansible/install_nginx.yml
 ---
-- name: Install Apache on workers
+- name: Install nginx on workers
   hosts: workers
   become: yes
   tasks:
     - name: Update apt cache
       apt:
         update_cache: yes
-    - name: Install Apache2
+    - name: Install nginx
       apt:
-        name: apache2
+        name: nginx
         state: present
-    - name: Ensure Apache is running
+    - name: Ensure nginx is running
       service:
-        name: apache2
+        name: nginx
         state: started
         enabled: yes
 EOF
@@ -86,20 +89,20 @@ cat <<EOF >  /home/vagrant/ansible/copy_index.yml
       copy:
         dest: /var/www/html/index.html
         content: |
-          <h1>Welcome to Ansible Lab</h1>
+          <h1>Welcome to Jeevi Academy - Ansible Lab</h1>
           <p>Deployed by Ansible on {{ inventory_hostname }}</p>
 EOF
 
 # Task 4 - Stop Apache
-cat <<EOF >  /home/vagrant/ansible/stop_apache.yml
+cat <<EOF >  /home/vagrant/ansible/stop_nginx.yml
 ---
-- name: Stop Apache on workers
+- name: Stop nginx on workers
   hosts: workers
   become: yes
   tasks:
-    - name: Stop Apache
+    - name: Stop nignx
       service:
-        name: apache2
+        name: nginx
         state: stopped
 EOF
 
