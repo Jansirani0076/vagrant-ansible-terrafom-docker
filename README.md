@@ -64,7 +64,7 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    cd ansible
   ```
   ```bash
-   ansbile --version
+  ansbile --version
   ```
    You should see similar output.
   
