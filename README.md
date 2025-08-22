@@ -59,10 +59,26 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
     ```
     <img width="979" height="99" alt="image" src="https://github.com/user-attachments/assets/d1121b81-9a39-4cc5-b9f5-567a97b4b1f6" />
 
-   This make sure you github repo is copied the necessary files in /home/vagrant home directory.
+   This make sure your github repo is copied the necessary files in /home/vagrant home directory.
 
-    
+6. **Install nginx**
 
+     ```bash
+    ansible-playbook install_nginx.yml
+    ```
+
+7. **copy index.html file**
+   
+   ```bash
+   ansible-playbook copy_index.yml
+   ```
+
+8. **Stop nginx**
+   
+   ```bash
+   ansible-playbook stop_nginx.yml
+   ```
+     
 4. **Push code changes**
 
    * Edit Flask app in `k8s-quiz/`.
