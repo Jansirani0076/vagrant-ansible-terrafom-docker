@@ -97,6 +97,14 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    
    <img width="884" height="220" alt="image" src="https://github.com/user-attachments/assets/33d8b378-935c-4949-bf47-70d0dc40f0f8" />
 
+2. **Let's practice some Terraform commands**
+
+    ```bash
+    ls
+    ```
+    <img width="931" height="75" alt="image" src="https://github.com/user-attachments/assets/4daef2d5-22e5-48db-987e-5c857c4fcb85" />
+
+
 
 4. **Push code changes**
 
