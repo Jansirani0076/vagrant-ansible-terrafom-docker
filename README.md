@@ -104,14 +104,35 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    
    <img width="884" height="220" alt="image" src="https://github.com/user-attachments/assets/33d8b378-935c-4949-bf47-70d0dc40f0f8" />
 
-2. **Let's practice some Terraform commands**
+2. **List terraform directory**
 
     ```bash
     ls
     ```
     <img width="931" height="75" alt="image" src="https://github.com/user-attachments/assets/4daef2d5-22e5-48db-987e-5c857c4fcb85" />
 
+3. **Initialization in Terraform**
 
+    ```bash
+    terraform init
+    ```
+   <img width="1042" height="472" alt="image" src="https://github.com/user-attachments/assets/e0bad5cc-0f52-4013-9a81-1d915a50efb2" />
+   
+4. **Terraform Plan**
+
+    ```bash
+    terraform plan
+    ```
+    <img width="1308" height="686" alt="image" src="https://github.com/user-attachments/assets/f6d42e4b-811e-4223-af70-97b30642b3f6" />
+    <img width="1320" height="741" alt="image" src="https://github.com/user-attachments/assets/40faf425-cc6d-4a81-b92f-e734702780d0" />
+
+5. **Terraform apply**
+
+    ```bash
+    terraform apply --auto-approve
+    ```
+    
+   
 
 4. **Push code changes**
 
