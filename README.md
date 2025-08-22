@@ -53,6 +53,9 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    vagrant ssh
 ---
 
+<img width="557" height="361" alt="image" src="https://github.com/user-attachments/assets/9147fd00-8e29-44ee-a04c-26381b73fbec" />
+
+
 ## 🔹 **Practice Ansible**
 
 1. **Switch to ansible directory & Check ansible version**
