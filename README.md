@@ -131,8 +131,16 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
     ```bash
     terraform apply --auto-approve
     ```
+    <img width="1395" height="370" alt="image" src="https://github.com/user-attachments/assets/c3797dcd-9174-454d-b9a5-30f2568802e2" />
+
+6. **Terraform destroy**
+
+    ```bash
+    terraform destroy --auto-approve
+    ```
+   <img width="1273" height="280" alt="image" src="https://github.com/user-attachments/assets/c895a070-9d11-4634-bc83-8b8e112e93dc" />
+
     
-   
 
 4. **Push code changes**
 
@@ -152,6 +160,61 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    * App is available at:
      👉 [http://localhost:5000](http://localhost:5000)
 
+
 ---
+## 🔹 **Troubleshooting Steps**
+
+
+### Why?
+
+* When you ran into this earlier:
+
+  ```
+  Error: container name "/quiz_app" is already in use
+  ```
+
+  Terraform failed to create a new container because an **old container** was already running.
+* At that point, Terraform state and Docker diverged:
+
+  * Terraform **lost track of the container** (wasn’t written to state, or was removed manually from `.tfstate`).
+  * But Docker still has the container (`docker ps -a` will show it).
+
+So when you run `terraform destroy`, it only destroys what’s in the state (`docker_image`) — not the “orphaned” container.
+
+---
+
+### ✅ How to fix
+
+1. **Check if the container still exists**
+
+   ```bash
+   docker ps -a | grep quiz_app
+   ```
+
+2. **Remove it manually**
+
+   ```bash
+   docker rm -f quiz_app
+   ```
+
+3. **(Optional) Sync Terraform state with reality**
+   If Terraform state has gotten dirty, you can clean it:
+
+   ```bash
+   terraform state list              # see tracked resources
+   terraform state rm docker_container.quiz_app
+   terraform state rm docker_image.quiz_app
+   ```
+
+4. **Re-run**
+
+   ```bash
+   terraform apply   # will recreate properly
+   terraform destroy # will now clean up both image & container
+   ```
+
+---
+
+
 
 
