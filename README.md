@@ -19,7 +19,7 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
 
 ---
 
-## 🔹 How Students Use It
+## 🔹 How to use It
 
 1. **Fork the repository**
    Fork this repo:
@@ -39,8 +39,12 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    ```
 
    * VM provisions with Docker, Terraform, and Ansible.
-  
-4. **Practice Ansible**
+
+---
+
+## 🔹 **Practice Ansible**
+
+1. **Switch to ansible directory & Check ansible version**
 
   ```bash
    cd ansible
@@ -48,11 +52,11 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
   ```bash
    ansbile --version
   ```
-  You should see similar output.
+   You should see similar output.
   
-  <img width="1150" height="245" alt="image" src="https://github.com/user-attachments/assets/5f958dce-977d-477f-9aab-78ac2cd9be49" />
+   <img width="1150" height="245" alt="image" src="https://github.com/user-attachments/assets/5f958dce-977d-477f-9aab-78ac2cd9be49" />
 
-5. **Let's practice some ansible commands**
+2. **Let's practice some ansible commands**
 
     ```bash
     ls
@@ -78,7 +82,22 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    ```bash
    ansible-playbook stop_nginx.yml
    ```
-     
+---
+
+## 🔹 **Practice Terraform**
+
+1. **Switch to Terraform directory and check terraform version**
+   
+  ```bash
+   cd /home/vagrant/terraform-docker/
+  ```
+  ```bash
+   terraform version
+  ```
+   
+   <img width="884" height="220" alt="image" src="https://github.com/user-attachments/assets/33d8b378-935c-4949-bf47-70d0dc40f0f8" />
+
+
 4. **Push code changes**
 
    * Edit Flask app in `k8s-quiz/`.
