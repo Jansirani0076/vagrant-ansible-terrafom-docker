@@ -39,7 +39,27 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
    ```
 
    * VM provisions with Docker, Terraform, and Ansible.
-   * GitHub self-hosted runner is automatically registered.
+  
+4. **Practice Ansible**
+
+  ```bash
+   cd ansible
+  ```
+  ```bash
+   ansbile --version
+  ```
+  You should see similar output.
+  
+  <img width="1150" height="245" alt="image" src="https://github.com/user-attachments/assets/5f958dce-977d-477f-9aab-78ac2cd9be49" />
+
+5. **Let's practice some ansible commands**
+
+    ```bash
+    ls
+    ```
+    <img width="979" height="99" alt="image" src="https://github.com/user-attachments/assets/d1121b81-9a39-4cc5-b9f5-567a97b4b1f6" />
+
+
 
 4. **Push code changes**
 
@@ -61,32 +81,4 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
 
 ---
 
-## 🔹 Project Structure
 
-```
-.
-├── k8s-quiz/                # Flask app (Dockerized)
-├── terraform-docker/        # Terraform configs for Docker container
-├── provision/               # Provision scripts (install Docker/Terraform/Ansible)
-├── .github/workflows/       # GitHub Actions workflows
-├── Vagrantfile              # VM definition
-└── README.md
-```
-
----
-
-## 🔹 Learning Outcomes
-
-* Understand **Vagrant-based lab automation**.
-* Use **Ansible for provisioning**.
-* Build & run Docker containers with **Terraform**.
-* Experience a **real GitHub Actions CI/CD pipeline**.
-* Deploy apps automatically with a **self-hosted runner**.
-
----
-
-✅ After setup, every **push → auto build → auto deploy → running app**.
-
----
-
-Would you like me to also include a **diagram** (ASCII or markdown image) showing the flow: `Student → GitHub → Actions → VM (Runner) → Terraform → Docker → Flask App`?
