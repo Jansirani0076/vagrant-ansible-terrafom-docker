@@ -47,6 +47,10 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
 
    * VM provisions with Docker, Terraform, and Ansible.
 
+4. **login to the VM**
+
+   ```bash
+   vagrant ssh
 ---
 
 ## 🔹 **Practice Ansible**
