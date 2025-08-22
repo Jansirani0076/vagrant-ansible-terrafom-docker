@@ -32,6 +32,8 @@ resource "docker_image" "quiz_app" {
 resource "docker_container" "quiz_app" {
   name  = "quiz_app"
   image = docker_image.quiz_app.image_id
+  must_run = true
+  restart = "always"
 
   ports {
     internal = 5000
