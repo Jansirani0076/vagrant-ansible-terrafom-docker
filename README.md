@@ -165,6 +165,9 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
 
     <img width="1666" height="530" alt="image" src="https://github.com/user-attachments/assets/36e759c9-81ba-4b73-bd15-4ccc83eebd1d" />
 
+    <img width="1207" height="439" alt="image" src="https://github.com/user-attachments/assets/6e511ab1-3734-422f-80fb-70946f42c388" />
+
+
 
 
 
