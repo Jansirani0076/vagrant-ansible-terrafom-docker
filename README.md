@@ -172,9 +172,21 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
 
      <img width="947" height="99" alt="image" src="https://github.com/user-attachments/assets/0f849cba-77f4-499e-a534-21c107da2f5a" />
 
+   Paste the github token here
+
   ```bash
+
   export GITHUB_PAT=
     
+  ```
+
+3. **Run Ansible playbook to setup local runner**
+
+    ```bash
+    cd /home/vagrant/ansible/
+    ```
+    ```bash
+    ansible-playbook install_github_runner.yml -l runner
     ```
 
 
