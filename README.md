@@ -168,7 +168,14 @@ The goal is to give students a **hands-on CI/CD experience** where pushing code 
     <img width="1207" height="439" alt="image" src="https://github.com/user-attachments/assets/6e511ab1-3734-422f-80fb-70946f42c388" />
 
 
+2. **Export GITHUB Token**
 
+     <img width="947" height="99" alt="image" src="https://github.com/user-attachments/assets/0f849cba-77f4-499e-a534-21c107da2f5a" />
+
+  ```bash
+  export GITHUB_PAT=
+    
+    ```
 
 
    * Commit & push:
